@@ -36,7 +36,7 @@ const Home: NextPage = () => {
 
   const percentage = getPercentageOfTripRemaining(
     days,
-    getDaysDifference(new Date("2024-01-30"), new Date("2024-05-11")),
+    getDaysDifference(new Date("2024-04-01"), new Date("2024-05-11")),
   );
 
   return (
