@@ -154,6 +154,7 @@ input.flight {
     box-shadow: none; /* Safari adds a box-shadow when using drop-shadow on iOS, remove manually */
     -webkit-print-color-adjust: exact;
     print-color-adjust: exact;
+    animation: flight-shake 0.7s infinite alternate; /* Add animation */
   }
 
   /* Thumb for Firefox */
@@ -184,9 +185,10 @@ input.flight {
     background-repeat: no-repeat;
     border-radius: 20% / 100%;
     filter: drop-shadow(calc(var(--shadow) * 2) calc(var(--shadow) * 1.25) var(--shadow) var(--color));
-    box-shadow: none;
+    box-shadow: none; /* Safari adds a box-shadow when using drop-shadow on iOS, remove manually */
     -webkit-print-color-adjust: exact;
     print-color-adjust: exact;
+    animation: flight-shake 0.7s infinite alternate; /* Add animation */
   }
 
 }
@@ -282,5 +284,10 @@ input.flight {
   --bg-trick: #fff0;
   --eqz: 0;
 }	
-
-
+@keyframes flight-shake {
+  0% { transform: translate(0, 0); }
+  25% { transform: translate(3px, -3px) rotate(2deg); }  /* Add rotation */
+  50% { transform: translate(-3px, 3px) rotate(-2deg); } /* Add rotation */
+  75% { transform: translate(3px, -3px) rotate(2deg); }  /* Add rotation */
+  100% { transform: translate(0, 0); }
+}

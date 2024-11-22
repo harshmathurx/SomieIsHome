@@ -23,7 +23,7 @@ const Home: NextPage = () => {
   };
 
   const days = useMemo(
-    () => getDaysDifference(new Date(), new Date("2024-05-11")),
+    () => getDaysDifference(new Date(), new Date("2025-01-02")),
     [],
   );
 
@@ -36,20 +36,21 @@ const Home: NextPage = () => {
 
   const percentage = getPercentageOfTripRemaining(
     days,
-    getDaysDifference(new Date("2024-04-01"), new Date("2024-05-11")),
+    getDaysDifference(new Date("2024-11-07"), new Date("2025-01-02")),
   );
 
   return (
     <div className={styles.container}>
       <div className={`${dmSans.className}`}>
         <Head>
-          <title>somie is home</title>
-          <meta name="description" content="hope this helps" />
+          <title>somie is back</title>
+          <meta name="description" content="we can't wait to see you" />
           <link
             rel="icon"
             href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌻</text></svg>"
           />
         </Head>
+        <h1 className="mb-10">GUESS WHAT???</h1>
         <div className={`flight-component ${dmSans.className}`}>
           <span>manchester</span>
           <input
@@ -67,7 +68,7 @@ const Home: NextPage = () => {
           />
           <span>bombay</span>
         </div>
-        <h1 className="mb-10">{days} days until somie is home</h1>
+        <h1 className="mb-10">{days} days until somie is finally back</h1>
       </div>
     </div>
   );
